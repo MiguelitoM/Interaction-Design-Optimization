@@ -58,8 +58,7 @@ The project followed an iterative user-centered design process:
 - **High-fidelity prototyping (Figma)**
   - mobile UI with realistic interaction flows
 - **Iteration based on user feedback**
-
-At least two evaluation cycles were conducted to refine usability and interaction flows. :contentReference[oaicite:0]{index=0}
+  - At least two evaluation cycles were conducted to refine usability and interaction flows.
 
 ## Key Design Decisions
 
@@ -74,3 +73,107 @@ At least two evaluation cycles were conducted to refine usability and interactio
 
 - **Error prevention over correction**
   → validation and constraints embedded in the UI
+
+---
+
+# Dense UI Target Selection – UX Bake-off #2
+
+## Prototype (p5.js)
+
+Bake-off #2 – Interactive prototype:
+
+👉 [Open interactive prototype](https://editor.p5js.org/miguel.almeida.morais/full/oh5-i6VRd)
+
+## Overview
+
+This project explores interaction techniques to optimize target selection in dense user interfaces, developed for the Human-Computer Interaction course at Instituto Superior Técnico.
+
+The objective was to minimize selection time and maximize accuracy when interacting with a grid of 80 targets.
+
+## Problem Context
+
+Dense interfaces are common in real-world systems (dashboards, control panels, data visualization tools), where users must quickly locate and select targets.
+
+The baseline system presents:
+- a grid of 8×10 targets
+- randomly assigned labels
+- a target to be selected per trial
+
+User performance is measured through:
+- accuracy (%)
+- total time
+- average selection time
+- penalized time (accounts for errors)
+
+These metrics are automatically collected and stored for evaluation.
+
+## Challenge
+
+The main challenge is reducing selection time without increasing error rate.
+
+This requires optimizing:
+- visual search
+- motor interaction
+- cognitive load
+
+## Solution
+
+We redesigned the interaction model and visual layout to improve target acquisition efficiency.
+
+The solution focuses on:
+
+- improving **visual hierarchy and grouping**
+- reducing **search space complexity**
+- enhancing **target distinguishability**
+- supporting faster **eye-hand coordination**
+
+## Design Approach
+
+The project followed an iterative design cycle:
+
+- ideation based on HCI principles and heuristics
+- rapid prototyping in p5.js
+- user testing and performance measurement
+- iterative refinement based on data
+
+At least two iterations were implemented and evaluated with users. :contentReference[oaicite:3]{index=3}
+
+## Constraints
+
+The solution had to respect strict constraints:
+
+- no access to the target label variable
+- no modification of performance metrics or Firebase logging
+- no changes to the target label display area
+- no additional input devices beyond a standard mouse
+- no text input allowed
+
+These constraints ensured a fair evaluation focused purely on UI/interaction design. :contentReference[oaicite:4]{index=4}
+
+## Implementation
+
+The prototype was developed using **p5.js**, running in the browser.
+
+Key aspects:
+- responsive UI using screen density (PPI/PPCM)
+- consistent target sizing across devices
+- real-time performance tracking
+
+## Evaluation
+
+Performance was evaluated using:
+
+- average selection time
+- penalized time (accounts for accuracy)
+- success rate
+
+Additionally:
+- A/B testing across iterations
+- statistical validation (e.g., t-tests)
+
+## Key Design Principles Applied
+
+- Fitts’s Law (target acquisition)
+- Hick’s Law (decision time)
+- visual grouping and proximity
+- feedback and error prevention
